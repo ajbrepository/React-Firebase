@@ -2,13 +2,14 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-02-27 22:57:33 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-03-10 17:19:07
+ * @Last Modified time: 2018-03-11 17:20:45
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import 'react-dates/lib/css/_datepicker.css';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { addExpense } from './actions/expenses';

@@ -2,13 +2,12 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-03-10 17:31:06 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-03-10 23:05:27
+ * @Last Modified time: 2018-03-11 17:20:47
  */
 
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
 
 export default class ExpenseForm extends React.Component {
   constructor(props) {
