@@ -2,7 +2,7 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-02-28 21:52:44 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-03-11 17:31:23
+ * @Last Modified time: 2018-03-11 17:45:17
  */
 
 //Entry Point && Output Final bundle file- where to put
@@ -29,6 +29,21 @@ module.exports = env => {
         },
         {
           use: ['style-loader', 'css-loader', 'sass-loader'],
+          // use: [
+          //   'style-loader',
+          //   {
+          //     loader: 'sass-loader',
+          //     options: {
+          //       sourceMap: true
+          //     }
+          //   },
+          //   {
+          //     loader: 'css-loader',
+          //     options: {
+          //       sourceMap: true
+          //     }
+          //   }
+          // ],
           // use: CSSExtract.extract({
           //   use: ['css-loader', 'sass-loader']
           // }),
@@ -38,6 +53,7 @@ module.exports = env => {
     },
     // plugins: [CSSExtract],
     devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
+    // devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
       contentBase: actualPath,
       historyApiFallback: true
