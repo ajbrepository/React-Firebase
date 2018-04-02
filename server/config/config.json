@@ -1,12 +1,12 @@
 {
-    "test": {
-        "PORT": "3000",
-        "MONGODB_URI": "mongodb://localhost:27017/TodoAppTest",
-        "JWT_SECRET": "Hallmark Salt"
-    },
-    "development": {
-        "PORT": "3000",
-        "MONGODB_URI": "mongodb://localhost:27017/TodoApp",
-        "JWT_SECRET": "Hallmark Salt"
-    }
+  "test": {
+    "PORT": "3000",
+    "MONGODB_URI": "mongodb://localhost:27017/ExpensifyTest",
+    "JWT_SECRET": "Hallmark Salt"
+  },
+  "development": {
+    "PORT": "3000",
+    "MONGODB_URI": "mongodb://localhost:27017/ExpensifyApp",
+    "JWT_SECRET": "Hallmark Salt"
+  }
 }

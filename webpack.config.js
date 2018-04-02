@@ -2,7 +2,7 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-02-28 21:52:44 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-03-11 17:45:17
+ * @Last Modified time: 2018-03-11 18:04:12
  */
 
 //Entry Point && Output Final bundle file- where to put
@@ -57,6 +57,7 @@ module.exports = env => {
     devServer: {
       contentBase: actualPath,
       historyApiFallback: true
+      // publicPath: '/dist/'
     },
     performance: { hints: false }
   };
