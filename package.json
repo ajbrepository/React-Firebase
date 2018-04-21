@@ -27,6 +27,7 @@
     "css-loader": "^0.28.10",
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.2",
+    "history": "^4.7.2",
     "moment": "^2.21.0",
     "mongodb": "^3.0.2",
     "mongoose": "^5.0.5",
@@ -51,12 +52,17 @@
     "webpack-cli": "^2.0.9"
   },
   "devDependencies": {
-    "chalk": "^2.3.2",
-    "webpack-dev-server": "^3.1.0",
+    "@types/firebase": "^3.2.1",
+    "@types/history": "^4.6.2",
     "@types/react-addons-shallow-compare": "^0.14.21",
     "@types/react-dates": "^16.0.5",
     "@types/react-router-dom": "^4.2.4",
     "@types/redux": "^3.6.0",
-    "live-server": "^1.2.0"
+    "@types/redux-thunk": "^2.1.0",
+    "chalk": "^2.3.2",
+    "cross-env": "^5.1.4",
+    "dotenv": "^5.0.1",
+    "live-server": "^1.2.0",
+    "webpack-dev-server": "^3.1.0"
   }
 }

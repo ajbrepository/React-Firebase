@@ -2,17 +2,15 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-03-08 11:21:49 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-03-12 16:47:59
+ * @Last Modified time: 2018-04-18 21:33:06
  */
 
 html {
   font-size: 62.5%;
 }
-.abc {
-  background: red;
-}
+
 body {
-  // background: radial-gradient(ellipse 75em 55em at top, #ff6a00, #ee0979);
+  // background: dimgrey;
   font-family: 'Lato', sans-serif;
   font-size: $m-size;
 }
@@ -25,5 +23,5 @@ butto:disabled {
 }
 .is-active {
   font-weight: bold;
-  color: red;
+  color: #4a47f5;
 }

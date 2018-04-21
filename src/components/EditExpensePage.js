@@ -2,14 +2,14 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-03-09 11:47:24 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-03-10 23:17:29
+ * @Last Modified time: 2018-04-19 18:03:47
  */
 
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
-import { removeExpense } from '../actions/expenses';
-import { editExpense } from '../actions/expenses';
+import { startRemoveExpense } from '../actions/expenses';
+import { startEditExpense } from '../actions/expenses';
 
 const EditExpensePage = props => {
   // console.log(props);
@@ -19,13 +19,13 @@ const EditExpensePage = props => {
         expense={props.expense}
         onSubmit={expense => {
           console.log('Updated', expense);
-          props.dispatch(editExpense(props.match.params.id, expense));
+          props.dispatch(startEditExpense(props.match.params.id, expense));
           props.history.push('/');
         }}
       />
       <button
         onClick={() => {
-          props.dispatch(removeExpense({ id: props.match.params.id }));
+          props.dispatch(startRemoveExpense({ id: props.match.params.id }));
           props.history.push('/');
         }}
       >

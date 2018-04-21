@@ -2,12 +2,12 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-03-09 11:46:58 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-03-10 19:16:30
+ * @Last Modified time: 2018-04-19 15:27:32
  */
 import React from 'react';
 import ExpenseForm from './ExpenseForm';
 import { connect } from 'react-redux';
-import { addExpense } from '../actions/expenses';
+import { startAddExpense } from '../actions/expenses';
 
 const AddExpensePage = props => {
   return (
@@ -16,7 +16,7 @@ const AddExpensePage = props => {
       <ExpenseForm
         onSubmit={expense => {
           // console.log(expense);
-          props.dispatch(addExpense(expense));
+          props.dispatch(startAddExpense(expense));
           props.history.push('/');
         }}
       />

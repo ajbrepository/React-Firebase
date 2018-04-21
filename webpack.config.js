@@ -2,13 +2,22 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-02-28 21:52:44 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-03-11 18:04:12
+ * @Last Modified time: 2018-04-20 13:49:58
  */
 
 //Entry Point && Output Final bundle file- where to put
 const path = require('path');
 const actualPath = path.join(__dirname, 'public');
+const webpack = require('webpack');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+// Process environment variable
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+if (process.env.NODE_ENV === 'test') {
+  require('dotenv').config({ path: '.env.development' });
+} else if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config({ path: '.env.development' });
+}
 
 //Module Exports to webpack for bundling
 module.exports = env => {
@@ -16,6 +25,7 @@ module.exports = env => {
   // const CSSExtract = new ExtractTextPlugin('styles.css');
   return {
     entry: './src/app.js',
+    // debug: true,
     output: {
       filename: 'bundle.js',
       path: actualPath
@@ -52,6 +62,28 @@ module.exports = env => {
       ]
     },
     // plugins: [CSSExtract],
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env.FIREBASE_APIKEY': JSON.stringify(
+          process.env.FIREBASE_APIKEY
+        ),
+        'process.env.FIREBASE_AUTHDOMAIN': JSON.stringify(
+          process.env.FIREBASE_AUTHDOMAIN
+        ),
+        'process.env.FIREBASE_DATABASEURL': JSON.stringify(
+          process.env.FIREBASE_DATABASEURL
+        ),
+        'process.env.FIREBASE_PROJECTID': JSON.stringify(
+          process.env.FIREBASE_PROJECTID
+        ),
+        'process.env.FIREBASE_STORAGEBUCKET': JSON.stringify(
+          process.env.FIREBASE_STORAGEBUCKET
+        ),
+        'process.env.FIREBASE_MESSAGINGSENDERID': JSON.stringify(
+          process.env.FIREBASE_MESSAGINGSENDERID
+        )
+      })
+    ],
     devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
     // devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {

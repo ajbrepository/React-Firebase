@@ -2,7 +2,7 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-03-10 17:31:06 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-03-12 16:50:09
+ * @Last Modified time: 2018-04-21 15:45:11
  */
 
 import React from 'react';
@@ -18,7 +18,8 @@ export default class ExpenseForm extends React.Component {
       amount: props.expense ? (props.expense.amount / 100).toString() : '',
       createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
       calendarFocused: false,
-      error: ''
+      error: '',
+      addEditButton: props.expense ? 'Edit Expense' : 'Add Expense'
     };
   }
 
@@ -109,7 +110,7 @@ export default class ExpenseForm extends React.Component {
             placeholder="Add a note for your expense (Optional)"
             onChange={this.onNoteChange}
           />
-          <button>Add Expense</button>
+          <button>{this.state.addEditButton}</button>
         </form>
       </div>
     );
