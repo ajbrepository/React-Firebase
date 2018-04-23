@@ -2,7 +2,7 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-03-10 16:46:33 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-03-11 16:49:40
+ * @Last Modified time: 2018-04-22 18:27:12
  */
 
 import React from 'react';
@@ -39,38 +39,52 @@ class ExpenseListFilters extends React.Component {
 
   render() {
     return (
-      <div>
-        <input
-          type="text"
-          value={this.props.filters.text}
-          onChange={e => {
-            this.props.dispatch(setTextFilter(e.target.value));
-          }}
-        />
-        <select
-          value={this.props.filters.sortBy}
-          onChange={e => {
-            if (e.target.value === 'date') {
-              this.props.dispatch(sortByDate());
-            }
-            if (e.target.value === 'amount') {
-              this.props.dispatch(sortByAmount());
-            }
-          }}
-        >
-          <option value="date">Date</option>
-          <option value="amount">Amount</option>
-        </select>
-        <DateRangePicker
-          startDate={this.props.filters.startDate} // momentPropTypes.momentObj or null,
-          endDate={this.props.filters.endDate} // momentPropTypes.momentObj or null,
-          onDatesChange={this.onDatesChange} // PropTypes.func.isRequired,
-          focusedInput={this.state.calendarFocused} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-          onFocusChange={this.onFocusChange} // PropTypes.func.isRequired,
-          numberOfMonths={1}
-          isOutsideRange={() => false}
-          showClearDates={true}
-        />
+      <div className="input-group-container">
+        <div className="content-container">
+          <div className="input-group">
+            <div className="input-group__item">
+              <input
+                className="text-input"
+                placeholder="Search..."
+                type="text"
+                value={this.props.filters.text}
+                onChange={e => {
+                  this.props.dispatch(setTextFilter(e.target.value));
+                }}
+              />
+            </div>
+            <div className="input-group__item">
+              <select
+                className="select-down"
+                value={this.props.filters.sortBy}
+                onChange={e => {
+                  if (e.target.value === 'date') {
+                    this.props.dispatch(sortByDate());
+                  }
+                  if (e.target.value === 'amount') {
+                    this.props.dispatch(sortByAmount());
+                  }
+                }}
+              >
+                <option value="date">Date</option>
+                <option value="amount">Amount</option>
+              </select>
+            </div>
+            <div className="input-group__item">
+              <DateRangePicker
+                className="text-input"
+                startDate={this.props.filters.startDate} // momentPropTypes.momentObj or null,
+                endDate={this.props.filters.endDate} // momentPropTypes.momentObj or null,
+                onDatesChange={this.onDatesChange} // PropTypes.func.isRequired,
+                focusedInput={this.state.calendarFocused} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                onFocusChange={this.onFocusChange} // PropTypes.func.isRequired,
+                numberOfMonths={1}
+                isOutsideRange={() => false}
+                showClearDates={true}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

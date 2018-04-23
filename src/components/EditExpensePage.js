@@ -2,7 +2,7 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-03-09 11:47:24 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-04-19 18:03:47
+ * @Last Modified time: 2018-04-22 19:12:16
  */
 
 import React from 'react';
@@ -15,22 +15,30 @@ const EditExpensePage = props => {
   // console.log(props);
   return (
     <div>
-      <ExpenseForm
-        expense={props.expense}
-        onSubmit={expense => {
-          console.log('Updated', expense);
-          props.dispatch(startEditExpense(props.match.params.id, expense));
-          props.history.push('/');
-        }}
-      />
-      <button
-        onClick={() => {
-          props.dispatch(startRemoveExpense({ id: props.match.params.id }));
-          props.history.push('/');
-        }}
-      >
-        Remove
-      </button>
+      <div className="page-header">
+        <div className="content-container">
+          <h1 className="page-header__title">Edit Record</h1>
+        </div>
+      </div>
+      <div className="content-container">
+        <ExpenseForm
+          expense={props.expense}
+          onSubmit={expense => {
+            console.log('Updated', expense);
+            props.dispatch(startEditExpense(props.match.params.id, expense));
+            props.history.push('/');
+          }}
+        />
+        <button
+          className="button-red"
+          onClick={() => {
+            props.dispatch(startRemoveExpense({ id: props.match.params.id }));
+            props.history.push('/');
+          }}
+        >
+          Remove Record
+        </button>
+      </div>
     </div>
   );
 };

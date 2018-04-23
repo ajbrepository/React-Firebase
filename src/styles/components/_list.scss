@@ -1,0 +1,81 @@
+/*
+ * @Author: Dheeraj Chaudhary 
+ * @Date: 2018-04-22 19:25:54 
+ * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
+ * @Last Modified time: 2018-04-22 20:39:35
+ */
+.record-list {
+  color: teal;
+  font-family: fantasy;
+}
+.list-header {
+  background: $blue;
+  border: 1px solid darken($color: $off-white, $amount: 7%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: $m-size $m-size;
+  font-size: $m-size;
+}
+
+.list-item {
+  display: flex;
+  background: #fbfbfd;
+  border: 1px solid darken($color: $off-white, $amount: 7%);
+  border-top: none;
+  flex-direction: column;
+  padding: 10px;
+  text-decoration: none;
+  transition: background 0.6s ease;
+  &:hover {
+    background: $blue;
+  }
+  @media (min-width: 770px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+  }
+}
+
+.list-item__title {
+  margin: 0;
+  word-break: break-all;
+  color: teal;
+}
+
+.list-item__sub-title {
+  color: grey;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+.list-item__data {
+  color: rgb(33, 154, 224);
+  font-size: 1.6rem;
+  margin: $s-size 0 0 0;
+  @media (min-width: 770px) {
+    margin: 0;
+    padding-left: $s-size;
+  }
+}
+
+.list-item--message {
+  align-items: center;
+  justify-content: center;
+  color: red;
+  padding: $m-size;
+  &:hover {
+    background: none;
+  }
+}
+
+.list-body {
+  margin-bottom: $l-size;
+  overflow: auto;
+  height: 400px;
+  @media (min-width: 770px) {
+    margin-bottom: $l-size;
+    height: 400px;
+  }
+}

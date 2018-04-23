@@ -2,7 +2,7 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-04-21 15:48:08 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-04-21 16:14:09
+ * @Last Modified time: 2018-04-22 16:06:32
  */
 
 import React from 'react';
@@ -11,8 +11,14 @@ import { startLogin } from './../actions/auth';
 
 export const LoginPage = ({ startLogin }) => {
   return (
-    <div>
-      <button onClick={startLogin}>Login</button>
+    <div className="box-layout">
+      <div className="box-layout__box">
+        <h1>React with Firebase - Project</h1>
+        <p>Google's Mobile Platform </p>
+        <button onClick={startLogin} className="btn btn-primary">
+          Login with Google
+        </button>
+      </div>
     </div>
   );
 };

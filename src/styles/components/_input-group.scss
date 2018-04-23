@@ -1,0 +1,32 @@
+/*
+ * @Author: Dheeraj Chaudhary 
+ * @Date: 2018-04-22 17:57:27 
+ * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
+ * @Last Modified time: 2018-04-22 19:14:45
+ */
+
+.input-group-container {
+  // background: #e8e4f3;
+}
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+  margin-bottom: $m-size;
+
+  @media (min-width: 770px) {
+    flex-direction: row;
+    margin-bottom: $m-size;
+  }
+}
+
+.input-group__item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @media (min-width: 770px) {
+    margin-top: 10px;
+    margin-right: $s-size;
+  }
+}

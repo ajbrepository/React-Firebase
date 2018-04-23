@@ -1,0 +1,27 @@
+/*
+ * @Author: Dheeraj Chaudhary 
+ * @Date: 2018-04-22 16:57:07 
+ * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
+ * @Last Modified time: 2018-04-22 20:48:35
+ */
+.page-header {
+  background: #f1eff7;
+  padding: $m-size 0;
+  margin-bottom: $s-size;
+}
+.page-header__title {
+  margin: 0;
+  font-weight: 300;
+  font-family: fantasy;
+  span {
+    font-weight: bold;
+    color: teal;
+  }
+}
+.page-header__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: opx;
+  margin-bottom: 20px;
+}

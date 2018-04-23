@@ -1,6 +1,32 @@
 /*
  * @Author: Dheeraj Chaudhary 
+ * @Date: 2018-04-22 16:27:20 
+ * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
+ * @Last Modified time: 2018-04-22 17:24:09
+ */
+/*
+ * @Author: Dheeraj Chaudhary 
  * @Date: 2018-04-02 11:42:54 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
  * @Last Modified time: 2018-04-18 21:31:45
  */
+.header {
+  background: $dark-blue;
+}
+
+.header h1 {
+  // background: rgb(24, 189, 189);
+  /* padding-top: 15px; */
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  height: 30px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $s-size 0;
+}

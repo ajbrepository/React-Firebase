@@ -1,0 +1,18 @@
+/*
+ * @Author: Dheeraj Chaudhary 
+ * @Date: 2018-04-22 19:20:26 
+ * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
+ * @Last Modified time: 2018-04-22 19:24:35
+ */
+
+.show-for-mobile {
+  @media (min-width: 770px) {
+    display: none;
+  }
+}
+
+.show-for-desktop {
+  @media (max-width: 770px) {
+    display: none;
+  }
+}

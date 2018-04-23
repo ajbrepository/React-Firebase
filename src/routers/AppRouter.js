@@ -2,7 +2,7 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-03-09 11:39:18 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-04-21 17:52:18
+ * @Last Modified time: 2018-04-22 17:27:00
  */
 import React from 'react';
 import ExpenseDashboardPage from './../components/ExpenseDashboardPage';
@@ -49,6 +49,7 @@ const AppRouter = () => {
             path="/edit/:id"
             component={EditExpensePage}
           />
+          <PrivateRoute exact={true} path="/help" component={HelpExpensePage} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>

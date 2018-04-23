@@ -2,7 +2,7 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-02-27 22:57:33 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-04-21 17:10:01
+ * @Last Modified time: 2018-04-22 21:29:55
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -16,6 +16,7 @@ import { startSetExpenses } from './actions/expenses';
 import { login, logout } from './actions/auth';
 import getVisibleExpenses from './selectors/expenses';
 import env from '../server/config/config';
+import LoadingPage from './components/LoadingPage';
 //DB Connect Required
 import { firebase } from './firebase/firebase';
 // import mongoose from '../server/db/mongoose';
@@ -44,15 +45,16 @@ const jsx = (
 
 //Rendering
 let hasRendered = false;
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 const renderApp = () => {
   if (!hasRendered) {
-    ReactDOM.render(jsx, document.getElementById('app'));
-    hasRendered = true;
+    setTimeout(() => {
+      ReactDOM.render(jsx, document.getElementById('app'));
+      hasRendered = true;
+    }, 3000);
   }
 };
-
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
 //Authentication
 firebase.auth().onAuthStateChanged(user => {

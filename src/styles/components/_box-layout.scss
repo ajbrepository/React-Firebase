@@ -1,0 +1,36 @@
+/*
+ * @Author: Dheeraj Chaudhary 
+ * @Date: 2018-04-22 14:13:45 
+ * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
+ * @Last Modified time: 2018-04-22 16:21:39
+ */
+.box-layout {
+  background: url('/images/login.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-layout__box {
+  background: fade-out($color: #1a212b, $amount: 0.35);
+  border-radius: 10px;
+  text-align: center;
+  width: 70rem;
+  padding: $l-size $m-size;
+  margin-bottom: 400px;
+  margin-left: 610px;
+  border-color: green;
+}
+
+.box-layout__box h1 {
+  margin: 0 0 $m-size 0;
+  line-height: 1;
+  color: #ded9e6;
+}
+
+.box-layout__box p {
+  color: #ce6937;
+}

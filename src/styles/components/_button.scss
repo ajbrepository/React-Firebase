@@ -1,0 +1,144 @@
+/*
+ * @Author: Dheeraj Chaudhary 
+ * @Date: 2018-04-22 16:16:58 
+ * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
+ * @Last Modified time: 2018-04-22 17:44:10
+ */
+
+button {
+  background-color: #0e96eb;
+  color: white;
+  border: 2px solid #0e96eb;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #73ccf9;
+}
+.button {
+  background-color: #0e96eb;
+  color: white;
+  border: 2px solid #0e96eb;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #73ccf9;
+}
+
+.button-green {
+  background-color: #58b559;
+  color: white;
+  border: 2px solid #58b559;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-green:hover {
+  background-color: rgb(138, 184, 138);
+}
+
+.button-teal {
+  background-color: rgb(23, 179, 179);
+  color: white;
+  border: 2px solid rgb(23, 179, 179);
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-teal:hover {
+  background-color: rgb(87, 180, 180);
+}
+
+.button-yellow {
+  background-color: #f1aa4c;
+  color: white;
+  border: 2px solid #f1aa4c;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-yellow:hover {
+  background-color: rgb(238, 197, 144);
+}
+
+.button-red {
+  background-color: #d6544e;
+  color: white;
+  border: 2px solid #d6544e;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-red:hover {
+  background-color: #db918d;
+}
+.button-grey {
+  background-color: #dbdddc;
+  color: black;
+  border: 2px solid #dbdddc;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-grey:hover {
+  background-color: rgb(241, 247, 244);
+}
